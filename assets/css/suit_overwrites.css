@@ -1,0 +1,18 @@
+home, body.suit_layout_vertical{
+    height:auto !important;
+    min-height:100vh;
+}
+
+
+body.suit_layout_vertical.filebrowser #container #content{
+    margin-left:0px !important;
+}
+
+body.suit_layout_vertical.filebrowser .filter-files-container{
+    width:360px;
+}
+/*
+body.suit_layout_vertical.filebrowser .filter-files-container .filter-files-field{
+    min-width:360px !important;
+}
+*/

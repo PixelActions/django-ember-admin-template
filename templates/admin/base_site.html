@@ -1,0 +1,39 @@
+{% extends 'admin/base.html' %}
+{% load i18n admin_static suit_tags %}
+{# Workaround to avoid circular template extends errors #}
+
+
+{% block extrastyle %}
+    {{block.super}}
+    <link rel="stylesheet" href='{% static "css/suit_overwrites.css" %}'>
+{% endblock %}
+
+{% block footer_content %}
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-3 footer-links">
+            {% block footer_links %}
+                <a href="http://www.pixelactions.com/" target="_blank">Support</a>
+                <a href="mailto:webmaster@pixelactions.com" target="_blank">Report a bug</a>
+            {% endblock %}
+        </div>
+
+        <div class="col-xs-12 col-sm-6 text-sm-center footer-copyright">
+            {% block copyright %}
+                Copyright &copy;
+                <span class="hidden-md-down">2013-</span>{% now "Y" %} Pixel Actions Ltd.
+                <br>Developed by
+                <a href="http://www.pixelactions.com" target="_blank">PixelActions.com</a>
+            {% endblock %}
+        </div>
+
+        <div class="col-xs-12 col-sm-3 text-sm-right footer-version">
+            {% block footer_branding %}
+                {% with admin_name=site_header|default:_('Django administration') django_version='django_version'|suit_conf:request %}
+                    {{ admin_name }}
+                {% endwith %}
+            {% endblock %}
+        </div>
+
+    </div>
+{% endblock %}
