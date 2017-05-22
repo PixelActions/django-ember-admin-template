@@ -1,7 +1,7 @@
 # django-ember-admin-template
 A project template to generate pre-configured Django projects to function as APIs and Admin panel for Ember (or other javascript powered) applications.
 
-##Technologies
+## Technologies
 
 Currently, the project template leverages:
 
@@ -15,10 +15,10 @@ Currently, the project template leverages:
 The app assumes that is gets mounted on a */backend* subpath. Let's say you have your public (static) site serving from http(s)://example.com.
 This app should get mounted on the */backend* subpath, so you get the following links:
 
-- http(s)://example.com/backend/admin/ , For admin panel access
-- http(s)://example.com/backend/api/ , For serving your api to your app
+- `http(s)://example.com/backend/admin/` , For admin panel access
+- `http(s)://example.com/backend/api/` , For serving your api to your app
 
-##Configuration
+## Configuration
 
 The project expets a number of environment variables to be set in order to function. A list follows:
 
